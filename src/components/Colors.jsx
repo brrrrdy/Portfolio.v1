@@ -10,21 +10,17 @@ function Colors({ theme, setTheme }) {
   };
 
   return (
-    <div className="flex gap-2">
+    <div className="theme-buttons">
       {THEMES.map((themeOption) => (
         <button
           type="button"
           key={themeOption}
           onClick={onButtonClick(themeOption)}
-          className={`px-4 py-2 font-medium transition-all duration-200 text-2xl hover:scale-110 ${
-            theme === themeOption
-              ? "opacity-100"
-              : "opacity-60 hover:opacity-80"
+          className={`theme-button ${
+            theme === themeOption ? "active" : "inactive"
           }`}
         >
-          <span className="material-icons text-2xl">
-            {getIcon(themeOption)}
-          </span>
+          <span className="material-icons">{getIcon(themeOption)}</span>
         </button>
       ))}
     </div>
