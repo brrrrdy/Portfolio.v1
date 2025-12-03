@@ -21,11 +21,11 @@ body {
 /* DAY AND NIGHT MODE */
 
 .app-dark {
-  --dark-text: #292929;
+  --dark-text: #ffffff;
   --light-text: #f9f8f8;
   --dark-background: #2f4550;
   --light-background: #586f7c;
-  --accent: #b8dbd9;
+  --accent: #000000;
   --button-border: #b8dbd9;
 
   background-color: var(--dark-background);
@@ -37,7 +37,7 @@ body {
   --light-text: #5e4b56;
   --dark-background: #dbe7e4;
   --light-background: #eddcd2;
-  --accent: #dbe7e4;
+  --accent: #eabfb8;
   --button-border: #5e4b56;
 
   background-color: var(--light-background);
@@ -144,7 +144,7 @@ body {
 .projects-gallery p {
   margin-bottom: 2rem;
   opacity: 0.8;
-  text-align: center;
+  text-align: start;
 }
 
 .gallery-grid {
@@ -202,7 +202,7 @@ body {
 }
 
 .tag {
-  background-color: var(--dark-background);
+  background-color: var(--accent);
   color: var(--light-text);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
