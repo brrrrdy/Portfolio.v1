@@ -1,5 +1,5 @@
 import { projects } from "../content/projects.json";
-import Card from "../helpers/Card.jsx";
+import Card from "../helpers/Card";
 
 function ProjectsGallery({ selectedTech }) {
   // shuffle array and get random projects
