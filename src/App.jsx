@@ -14,9 +14,7 @@ function App() {
         <Colors theme={theme} setTheme={setTheme} />
       </div>
 
-      <div className="main-content">
-        <h1 className="title">Portfolio Coming Soon</h1>
-      </div>
+      <div className="main-content"></div>
       <div className="Gallery">
         <ProjectsGallery></ProjectsGallery>
       </div>
