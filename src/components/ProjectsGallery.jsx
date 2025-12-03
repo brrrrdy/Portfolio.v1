@@ -1,4 +1,3 @@
-import React from "react";
 import { projects } from "../content/projects.json";
 import Card from "../helpers/Card.jsx";
 
@@ -10,9 +9,11 @@ function ProjectsGallery() {
   return (
     <div className="projects-gallery">
       <h2>My Projects</h2>
-      {featuredProjects.map((project) => (
-        <Card key={project.id} project={project} />
-      ))}
+      <div className="gallery-grid">
+        {featuredProjects.map((project) => (
+          <Card key={project.id} project={project} />
+        ))}
+      </div>
     </div>
   );
 }
