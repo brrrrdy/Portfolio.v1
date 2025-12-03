@@ -17,9 +17,7 @@ function App() {
       <div className="main-content">
         <h1 className="title">Portfolio Coming Soon</h1>
       </div>
-      <div className="Gallery">
-        <ProjectGallery />
-      </div>
+      <div className="Gallery"></div>
     </div>
   );
 }
