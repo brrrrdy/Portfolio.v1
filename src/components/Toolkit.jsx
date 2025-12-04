@@ -19,10 +19,9 @@ function Toolkit({ selectedTechs, setSelectedTechs }) {
   return (
     <div className="toolkit-container">
       <div className="section-content">
-        <h2 className="section-title">My Toolkit</h2>
+        <h2 className="section-title">my toolkit</h2>
         <p className="section-subtitle">
-          Click multiple technologies to filter projects that use ALL selected
-          technologies.
+          the technologies that I use every day in my work.
         </p>
 
         <div className="technologies-grid">

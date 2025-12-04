@@ -17,7 +17,7 @@ function App() {
       </div>
 
       <div className="main-content">
-        <h1 className="title">Portfolio Coming Soon</h1>
+        <h1 className="title">tom alvarez</h1>
       </div>
 
       <div className="Gallery">

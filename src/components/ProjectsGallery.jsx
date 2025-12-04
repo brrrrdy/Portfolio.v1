@@ -25,11 +25,12 @@ function ProjectsGallery({ selectedTechs }) {
     }
   } else {
     // show featured projects by default
+
     const featuredProjects = projects.filter(
       (project) => project.featured[0] === "y"
     );
     displayProjects = featuredProjects.slice(0, 4);
-    galleryTitle = "Featured Projects";
+    galleryTitle = "featured projects";
   }
 
   return (
