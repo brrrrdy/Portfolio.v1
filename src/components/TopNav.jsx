@@ -19,7 +19,14 @@ function TopNav() {
   return (
     <nav className="top-nav">
       <div className="top-nav-container">
-        {/* nav links */}
+        {/* left side - theme toggle */}
+        <div className="nav-left">
+          <div className="nav-theme-toggle">
+            <Colors theme={theme} setTheme={setTheme} />
+          </div>
+        </div>
+
+        {/* center - nav links */}
         <div className="nav-links">
           {navLinks.map((link) => (
             <a key={link.href} href={link.href} className="nav-link">
@@ -28,14 +35,8 @@ function TopNav() {
           ))}
         </div>
 
-        {/* controls */}
-        <div className="nav-controls">
-          {/* theme toggle */}
-          <div className="nav-theme-toggle">
-            <Colors theme={theme} setTheme={setTheme} />
-          </div>
-
-          {/* language Buttons */}
+        {/* right side - language buttons */}
+        <div className="nav-right">
           <div className="language-buttons">
             {["EN", "ES", "GZ"].map((lang) => (
               <button key={lang} className={`lang-btn lang-${lang}`}>
