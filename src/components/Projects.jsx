@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { projects } from "../content/projects.json";
 import Card from "../helpers/Card";
+import Toolkit from "./Toolkit";
 
-function ProjectsGallery({ selectedTechs }) {
+function Projects() {
+  const [selectedTechs, setSelectedTechs] = useState([]);
+
   // shuffle array and get random projects
   const getRandomProjects = (projectsArray, count) => {
     const shuffled = [...projectsArray].sort(() => Math.random() - 0.5);
@@ -25,7 +29,6 @@ function ProjectsGallery({ selectedTechs }) {
     }
   } else {
     // show featured projects by default
-
     const featuredProjects = projects.filter(
       (project) => project.featured[0] === "y"
     );
@@ -34,19 +37,28 @@ function ProjectsGallery({ selectedTechs }) {
   }
 
   return (
-    <div className="projects-gallery">
-      <h2>{galleryTitle}</h2>
-      <p>
-        {displayProjects.length} project
-        {displayProjects.length !== 1 ? "s" : ""} found
-      </p>
-      <div className="gallery-grid">
-        {displayProjects.map((project) => (
-          <Card key={project.id} project={project} />
-        ))}
+    <>
+      <div className="projects-gallery">
+        <h2>{galleryTitle}</h2>
+        <p>
+          {displayProjects.length} project
+          {displayProjects.length !== 1 ? "s" : ""} found
+        </p>
+        <div className="gallery-grid">
+          {displayProjects.map((project) => (
+            <Card key={project.id} project={project} />
+          ))}
+        </div>
       </div>
-    </div>
+
+      <div className="Toolkit">
+        <Toolkit
+          selectedTechs={selectedTechs}
+          setSelectedTechs={setSelectedTechs}
+        />
+      </div>
+    </>
   );
 }
 
-export default ProjectsGallery;
+export default Projects;
