@@ -58,6 +58,11 @@
   transition: all 0.2s ease;
 }
 
+.nav-link:hover {
+  color: orangered;
+  transform: translateY(-2px);
+}
+
 .language-buttons {
   display: flex;
   gap: 1rem;
@@ -76,7 +81,7 @@
 }
 
 .lang-btn:hover {
-  color: var(--light-text);
+  color: orangered;
   transform: translateY(-1px);
   background: none;
 }
