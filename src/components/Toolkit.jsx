@@ -1,7 +1,45 @@
 import React from "react";
 import { projects } from "../content/projects.json";
 
+// Import technology logos
+import cssLogo from "../assets/images/css3-plain.svg";
+import eslintLogo from "../assets/images/eslint-plain.svg";
+import figmaLogo from "../assets/images/figma-original.svg";
+import gitLogo from "../assets/images/git-original.svg";
+import githubLogo from "../assets/images/github-original.svg";
+import htmlLogo from "../assets/images/html5-plain-wordmark.svg";
+import javascriptLogo from "../assets/images/javascript-plain.svg";
+import jestLogo from "../assets/images/jest-plain.svg";
+import jiraLogo from "../assets/images/jira-original.svg";
+import jsonLogo from "../assets/images/json-plain.svg";
+import photoshopLogo from "../assets/images/photoshop-plain.svg";
+import reactLogo from "../assets/images/react-original.svg";
+import tailwindLogo from "../assets/images/tailwindcss-original.svg";
+import webpackLogo from "../assets/images/webpack-plain.svg";
+import xmlLogo from "../assets/images/xml-plain.svg";
+import apiLogo from "../assets/images/api.svg";
+import responsiveLogo from "../assets/images/responsive.svg";
+
 function Toolkit({ selectedTechs, setSelectedTechs }) {
+  const techLogos = {
+    CSS: cssLogo,
+    ESLint: eslintLogo,
+    Figma: figmaLogo,
+    Git: gitLogo,
+    GitHub: githubLogo,
+    HTML: htmlLogo,
+    JavaScript: javascriptLogo,
+    Jest: jestLogo,
+    Jira: jiraLogo,
+    JSON: jsonLogo,
+    Photoshop: photoshopLogo,
+    React: reactLogo,
+    "Tailwind CSS": tailwindLogo,
+    Webpack: webpackLogo,
+    XML: xmlLogo,
+    "API Integration": apiLogo,
+    "Responsive Design": responsiveLogo,
+  };
   // Extract all unique tags from all projects, excluding 'Game'
   const allTags = projects.flatMap((project) => project.tags);
   const uniqueTechnologies = [...new Set(allTags)]
@@ -32,6 +70,14 @@ function Toolkit({ selectedTechs, setSelectedTechs }) {
               }`}
               onClick={() => handleTechClick(tech)}
             >
+              {techLogos[tech] && (
+                <img
+                  src={techLogos[tech]}
+                  alt={`${tech} logo`}
+                  className="technology-logo"
+                  data-tech={tech.toLowerCase().replace(/\s+/g, "-")}
+                />
+              )}
               <span className="technology-name">{tech}</span>
             </div>
           ))}

@@ -45,6 +45,6 @@ body {
 }
 
 /* DEBUG: Apply green borders to all elements */
-* {
+/* * {
   border: 2px solid green !important;
-}
+} */

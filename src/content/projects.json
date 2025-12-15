@@ -5,7 +5,13 @@
       "title": "Weather App",
       "description": "I made my own weather app that fetches real-time data from a weather API and dynamically updates the background to reflect day or night at the selected location.",
       "image": "https://via.placeholder.com/300x200?text=Weather+App",
-      "tags": ["JavaScript", "API Integration", "CSS", "HTML", "Responsive"],
+      "tags": [
+        "JavaScript",
+        "API Integration",
+        "CSS",
+        "HTML",
+        "Responsive Design"
+      ],
       "HTMLlink": ["https://github.com/brrrrdy/Weather-App"],
       "ghPage": ["https://brrrrdy.github.io/Weather-App/"],
       "featured": ["y"]
@@ -15,7 +21,7 @@
       "title": "Admin Dashboard",
       "description": "A responsive admin dashboard that integrates the Last.fm API to display my currently playing music alongside other dynamic content.",
       "image": "https://via.placeholder.com/300x200?text=Admin+Dashboard",
-      "tags": ["HTML", "CSS", "JavaScript", "Responsive"],
+      "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"],
       "HTMLlink": ["https://github.com/brrrrdy/Dashboard"],
       "ghPage": ["https://brrrrdy.github.io/Dashboard/"],
       "featured": ["y"]
@@ -47,7 +53,7 @@
       "title": "Sign-up Form",
       "description": "A responsive sign-up form with real-time validation and clean, modern styling.",
       "image": "",
-      "tags": ["JavaScript", "CSS", "HTML"],
+      "tags": ["JavaScript", "CSS", "HTML", "Responsive Design"],
       "HTMLlink": ["https://github.com/brrrrdy/Sign-up-Form"],
       "ghPage": ["https://brrrrdy.github.io/Sign-up-Form/"],
       "featured": ["y"]
@@ -103,6 +109,17 @@
       "image": "https://via.placeholder.com/300x200?text=Etch-a-Sketch",
       "tags": ["JavaScript", "CSS", "HTML", "Game"],
       "HTMLlink": ["https://github.com/brrrrdy/Etch-a-Sketch"],
+      "ghPage": ["https://brrrrdy.github.io/Etch-a-Sketch/"],
+      "featured": ["y"]
+    },
+
+    {
+      "id": 11,
+      "title": "Portfolio Page",
+      "description": "This very website!",
+      "image": "https://via.placeholder.com/300x200?text=Etch-a-Sketch",
+      "tags": ["JavaScript", "CSS", "HTML", "React", "Responsive Design"],
+      "HTMLlink": ["https://github.com/brrrrdy/portfolioV2"],
       "ghPage": ["https://brrrrdy.github.io/Etch-a-Sketch/"],
       "featured": ["y"]
     }
