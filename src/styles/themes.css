@@ -7,6 +7,9 @@
   --light-background: #586f7c;
   --accent: #000000;
   --button-border: #b8dbd9;
+  --solid-button: #be8325;
+  --solid-button-active: #ead027;
+  --solid-button-hover: #fb923c;
 
   background-color: var(--dark-background);
   color: var(--light-text);
@@ -19,6 +22,7 @@
   --light-background: #eddcd2;
   --accent: #eabfb8;
   --button-border: #5e4b56;
+  --dark-button-inactive: #3e30ad;
 
   background-color: var(--light-background);
   color: var(--dark-text);
@@ -29,6 +33,72 @@
   width: 100%;
   position: relative;
 }
+
+/* tech logos */
+
+.app-dark .technology-logo {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%)
+    hue-rotate(109deg) brightness(119%) contrast(119%);
+}
+
+.app-dark .technology-item.selected .technology-logo {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(100%) saturate(1352%)
+    hue-rotate(87deg) brightness(119%) contrast(119%);
+}
+
+/* cv button */
+
+.app-dark .download-cv {
+  color: var(--light-text);
+  border-color: var(--light-text);
+}
+
+.app-dark .download-cv:hover {
+  color: #16a34a;
+  border-color: #16a34a;
+}
+
+/* Dark mode theme button styling */
+.app-dark .theme-button {
+  color: var(--solid-button);
+}
+
+.app-dark .theme-button:hover {
+  color: var(--solid-button-hover);
+  transform: scale(1.2);
+}
+
+.app-dark .theme-button.active {
+  color: var(--solid-button-active);
+  opacity: 1;
+}
+
+/* Light mode theme button styling */
+.app-light .theme-button {
+  color: #dc2626;
+}
+
+.app-light .theme-button:hover {
+  color: #16a34a;
+  transform: scale(1.2);
+}
+
+.app-light .theme-button.active {
+  color: #b91c1c;
+  opacity: 1;
+}
+
+.app-light .theme-button.inactive {
+  color: var(--dark-button-inactive);
+}
+
+/* hero image */
+
+.app-dark .tomImage {
+  filter: invert(70%);
+}
+
+/* day and night mode toggle */
 
 .theme-toggle {
   position: absolute;
@@ -54,7 +124,7 @@
 }
 
 .theme-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .theme-button.active {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import heroContent from "../content/hero.json";
-import tomImage from "../assets/images/proj_images/tom.png";
+import tomImage from "../assets/images/heroTom.webp";
 
 const phrases = ["full-stack developer", "basketball player", "pulpo enjoyer"];
 const colors = ["red", "orange", "purple"];
@@ -24,7 +24,7 @@ function Hero() {
           setIsTyping(false);
           setTimeout(() => {
             setIsDeleting(true);
-          }, 3000); // phrase pause
+          }, 3000);
         }
       } else if (isDeleting) {
         if (currentCharIndex > 0) {
@@ -40,9 +40,9 @@ function Hero() {
 
     let timeout;
     if (isTyping && !isDeleting) {
-      timeout = setTimeout(typeAnimation, 80); // typing speed
+      timeout = setTimeout(typeAnimation, 80);
     } else if (isDeleting) {
-      timeout = setTimeout(typeAnimation, 20); // deleting speed
+      timeout = setTimeout(typeAnimation, 20);
     }
 
     return () => clearTimeout(timeout);
@@ -54,6 +54,7 @@ function Hero() {
         <div className="main-content">
           <div className="text-content">
             <h1 className="title">{heroContent.headerTitle}</h1>
+
             <div className="subtitle">
               <span>{heroContent.headerSubtitleEn} </span>
               <span className={`typing-text ${colors[currentPhraseIndex]}`}>
@@ -61,6 +62,7 @@ function Hero() {
               </span>
               <span className="cursor">|</span>
             </div>
+
             <div className="link-content">
               <a href="#" className="download-cv">
                 <span>download my cv</span>
@@ -76,8 +78,9 @@ function Hero() {
               </a>
             </div>
           </div>
+
           <div className="image-container">
-            <img src={tomImage} alt="Tom" />
+            <img className="tomImage" src={tomImage} alt="Tom" />
           </div>
         </div>
       </div>
