@@ -40,7 +40,7 @@ function Projects() {
     <>
       <div className="projects-gallery">
         <div className="projects-container">
-          <h2>{galleryTitle}</h2>
+          <h2 className="section-title">{galleryTitle}</h2>
           <div className="gallery-grid">
             {displayProjects.map((project) => (
               <Card key={project.id} project={project} />

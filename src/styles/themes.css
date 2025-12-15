@@ -10,6 +10,7 @@
   --solid-button: #be8325;
   --solid-button-active: #ead027;
   --solid-button-hover: #fb923c;
+  --card-border: #b8dbd9;
 
   background-color: var(--dark-background);
   color: var(--light-text);
@@ -23,6 +24,7 @@
   --accent: #eabfb8;
   --button-border: #5e4b56;
   --dark-button-inactive: #3e30ad;
+  --card-border: #df462f;
 
   background-color: var(--light-background);
   color: var(--dark-text);

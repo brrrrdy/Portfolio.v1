@@ -38,7 +38,7 @@
 
 .card {
   padding: 1.5rem;
-  border: solid;
+  border: 2px solid var(--card-border);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,6 @@
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
