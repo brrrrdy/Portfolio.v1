@@ -1,11 +1,69 @@
+import { useState, useEffect } from "react";
 import heroContent from "../content/hero.json";
+import tomImage from "../assets/images/proj_images/tom.png";
+
+const phrases = ["full-stack developer", "basketball player", "pulpo enjoyer"];
+const colors = ["red", "orange", "purple"];
 
 function Hero() {
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [currentCharIndex, setCurrentCharIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    const currentPhrase = phrases[currentPhraseIndex];
+
+    const typeAnimation = () => {
+      if (isTyping && !isDeleting) {
+        if (currentCharIndex < currentPhrase.length) {
+          setDisplayedText(currentPhrase.substring(0, currentCharIndex + 1));
+          setCurrentCharIndex((prev) => prev + 1);
+        } else {
+          setIsTyping(false);
+          setTimeout(() => {
+            setIsDeleting(true);
+          }, 3000); // phrase pause
+        }
+      } else if (isDeleting) {
+        if (currentCharIndex > 0) {
+          setDisplayedText(currentPhrase.substring(0, currentCharIndex - 1));
+          setCurrentCharIndex((prev) => prev - 1);
+        } else {
+          setIsDeleting(false);
+          setIsTyping(true);
+          setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+        }
+      }
+    };
+
+    let timeout;
+    if (isTyping && !isDeleting) {
+      timeout = setTimeout(typeAnimation, 80); // typing speed
+    } else if (isDeleting) {
+      timeout = setTimeout(typeAnimation, 20); // deleting speed
+    }
+
+    return () => clearTimeout(timeout);
+  }, [currentPhraseIndex, currentCharIndex, isTyping, isDeleting]);
+
   return (
     <div className="hero-section">
       <div className="main-content">
-        <h1 className="title">{heroContent.headerTitle}</h1>
-        <p className="subtitle">{heroContent.headerSubtitleEn}</p>
+        <div className="text-content">
+          <h1 className="title">{heroContent.headerTitle}</h1>
+          <div className="subtitle">
+            <span>{heroContent.headerSubtitleEn} </span>
+            <span className={`typing-text ${colors[currentPhraseIndex]}`}>
+              {displayedText}
+            </span>
+            <span className="cursor">|</span>
+          </div>
+        </div>
+        <div className="image-container">
+          <img src={tomImage} alt="Tom" />
+        </div>
       </div>
     </div>
   );
