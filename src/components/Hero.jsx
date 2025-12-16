@@ -56,7 +56,9 @@ function Hero() {
             <h1 className="title">{heroContent.headerTitle}</h1>
 
             <div className="subtitle">
-              <span>{heroContent.headerSubtitleEn} </span>
+              <span className="intro-text">
+                {heroContent.headerSubtitleEn}{" "}
+              </span>
               <span className={`typing-text ${colors[currentPhraseIndex]}`}>
                 {displayedText}
               </span>
