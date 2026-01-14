@@ -14,14 +14,21 @@
 
 .footer-content {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 10rem;
+  gap: 2rem;
 }
 
 .footer-content p {
   margin: 0;
   opacity: 0.8;
+}
+
+/* Right side container for sitemap and social */
+.footer-right-section {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
 }
 
 .footer-right {
