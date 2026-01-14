@@ -141,6 +141,11 @@
     padding-right: 0;
   }
 
+  .image-container img {
+    width: clamp(140px, 15vw, 180px);
+    border-width: 2px;
+  }
+
   .title {
     font-size: clamp(2.5rem, 8vw, 4rem);
   }
@@ -163,5 +168,69 @@
   .typing-text {
     font-size: clamp(0.8rem, 2.2vw, 1rem);
     min-width: auto;
+  }
+}
+
+/* 432px */
+
+@media (max-width: 433px) {
+  .hero-container {
+    padding: 0 0.5rem;
+  }
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    gap: clamp(0.25rem, 2vw, 1rem);
+  }
+
+  .image-container {
+    padding-right: 1rem;
+  }
+
+  .image-container img {
+    width: clamp(120px, 15vw, 180px);
+    border-width: 2px;
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .subtitle {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    padding-left: 1rem;
+    min-width: auto;
+  }
+
+  .link-content {
+    padding-left: 1rem;
+  }
+
+  .intro-text {
+    font-size: clamp(0.1rem, 3vw, 1.1rem);
+    min-width: auto;
+  }
+
+  .typing-text {
+    font-size: clamp(0.8rem, 2.2vw, 1rem);
+    min-width: auto;
+    font-size: 0.65rem;
+  }
+
+  .download-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.7rem;
+    color: #dc2626;
+    border: 2px solid #dc2626;
+    padding: 0.625rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
   }
 }
