@@ -1,28 +1,22 @@
-const THEMES = ["light", "dark"];
-
 function Colors({ theme, setTheme }) {
-  const onButtonClick = (selectedTheme) => () => {
-    setTheme(selectedTheme);
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
-  const getIcon = (themeOption) => {
-    return themeOption === "light" ? "light_mode" : "dark_mode";
+  const getIcon = () => {
+    return theme === "light" ? "dark_mode" : "light_mode";
   };
 
   return (
-    <div className="theme-buttons">
-      {THEMES.map((themeOption) => (
-        <button
-          type="button"
-          key={themeOption}
-          onClick={onButtonClick(themeOption)}
-          className={`theme-button ${
-            theme === themeOption ? "active" : "inactive"
-          }`}
-        >
-          <span className="material-icons">{getIcon(themeOption)}</span>
-        </button>
-      ))}
+    <div className="theme-toggle">
+      <button
+        type="button"
+        onClick={toggleTheme}
+        className="theme-toggle-button"
+        title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+      >
+        <span className="material-icons">{getIcon()}</span>
+      </button>
     </div>
   );
 }
