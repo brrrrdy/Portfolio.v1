@@ -9,17 +9,6 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-left">
-            <div className="footer-github">
-              <a
-                href="https://github.com/brrrrdy/Portfolio.v1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="repo-link"
-              >
-                <img src={githubLogo} alt="GitHub" className="github-logo" />
-                <p>check out the repo for this project!</p>
-              </a>
-            </div>
             <p>&copy; {currentYear} Tom Alvarez. All rights reserved.</p>
           </div>
 
