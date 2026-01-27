@@ -43,7 +43,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: rgb(241, 193, 193);
+  background-color: var(--alternate-background);
   height: 100%;
 }
 
