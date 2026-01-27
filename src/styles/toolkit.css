@@ -91,6 +91,6 @@
 /* responsive */
 @media (max-width: 768px) {
   .toolkit-section .section-container h2 {
-    padding-left: 1rem; /* Adjust this value as needed */
+    padding-left: 1rem;
   }
 }
