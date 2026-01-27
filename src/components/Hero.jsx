@@ -66,7 +66,7 @@ function Hero() {
             </div>
 
             <div className="link-content">
-              <a href="#" className="download-cv">
+              <a href="#" className="btn-primary">
                 <span>download my cv</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -10,7 +10,7 @@
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 2rem 4rem 2rem;
+  padding: 0 2rem 1rem 2rem;
   /* background-color: rgb(249, 209, 191); */
 }
 
@@ -123,6 +123,12 @@
   border-radius: 4px;
   font-size: 0.75rem;
   font-weight: 500;
+}
+
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
 }
 
 /* responsive */

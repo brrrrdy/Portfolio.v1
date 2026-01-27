@@ -18,7 +18,7 @@ function Projects() {
   if (selectedTechs && selectedTechs.length > 0) {
     // filter projects that include all selected techs
     const filteredProjects = projects.filter((project) =>
-      selectedTechs.every((tech) => project.tags.includes(tech))
+      selectedTechs.every((tech) => project.tags.includes(tech)),
     );
     displayProjects = getRandomProjects(filteredProjects, 4);
 
@@ -30,7 +30,7 @@ function Projects() {
   } else {
     // show featured projects by default
     const featuredProjects = projects.filter(
-      (project) => project.featured[0] === "y"
+      (project) => project.featured[0] === "y",
     );
     displayProjects = featuredProjects.slice(0, 4);
     galleryTitle = "my projects";
@@ -45,6 +45,11 @@ function Projects() {
             {displayProjects.map((project) => (
               <Card key={project.id} project={project} />
             ))}
+          </div>
+          <div className="see-more-container">
+            <a href="/all-projects" className="btn-primary">
+              Click to see all my projects
+            </a>
           </div>
         </div>
       </div>
