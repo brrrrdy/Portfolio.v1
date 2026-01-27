@@ -1,5 +1,9 @@
 /* TOOLKIT */
 
+.toolkit-section {
+  width: 100%;
+}
+
 .toolkit-container {
   display: flex;
   flex-direction: column;
@@ -84,21 +88,9 @@
   color: var(--dark-text);
 }
 
-/* Responsive */
+/* responsive */
 @media (max-width: 768px) {
-  .toolkit-container {
-    padding: 1rem;
-  }
-
-  .technologies-grid {
-    gap: 0.75rem;
-  }
-
-  .technology-item {
-    padding: 0.75rem;
-  }
-
-  .technology-name {
-    font-size: 0.875rem;
+  .toolkit-section .section-container h2 {
+    padding-left: 1rem; /* Adjust this value as needed */
   }
 }

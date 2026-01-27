@@ -39,17 +39,19 @@ function Projects() {
   return (
     <>
       <div className="projects-gallery">
-        <div className="projects-container">
-          <h2 className="section-title">{galleryTitle}</h2>
-          <div className="gallery-grid">
-            {displayProjects.map((project) => (
-              <Card key={project.id} project={project} />
-            ))}
-          </div>
-          <div className="see-more-container">
-            <a href="/all-projects" className="btn-primary">
-              Click to see all my projects
-            </a>
+        <div className="section-container">
+          <h2>{galleryTitle}</h2>
+          <div className="section-content-wrapper">
+            <div className="gallery-grid">
+              {displayProjects.map((project) => (
+                <Card key={project.id} project={project} />
+              ))}
+            </div>
+            <div className="see-more-container">
+              <a href="/all-projects" className="btn-primary">
+                Click to see all my projects
+              </a>
+            </div>
           </div>
         </div>
       </div>

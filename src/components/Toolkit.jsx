@@ -57,30 +57,31 @@ function Toolkit({ selectedTechs, setSelectedTechs }) {
   };
 
   return (
-    <div className="toolkit-container">
-      <div className="section-content">
-        <h2 className="section-title">my toolkit</h2>
-
-        <div className="technologies-grid">
-          {uniqueTechnologies.map((tech, index) => (
-            <div
-              key={index}
-              className={`technology-item ${
-                selectedTechs.includes(tech) ? "selected" : ""
-              }`}
-              onClick={() => handleTechClick(tech)}
-            >
-              {techLogos[tech] && (
-                <img
-                  src={techLogos[tech]}
-                  alt={`${tech} logo`}
-                  className="technology-logo"
-                  data-tech={tech.toLowerCase().replace(/\s+/g, "-")}
-                />
-              )}
-              <span className="technology-name">{tech}</span>
-            </div>
-          ))}
+    <div className="toolkit-section">
+      <div className="section-container">
+        <h2>my toolkit</h2>
+        <div className="section-content-wrapper">
+          <div className="technologies-grid">
+            {uniqueTechnologies.map((tech, index) => (
+              <div
+                key={index}
+                className={`technology-item ${
+                  selectedTechs.includes(tech) ? "selected" : ""
+                }`}
+                onClick={() => handleTechClick(tech)}
+              >
+                {techLogos[tech] && (
+                  <img
+                    src={techLogos[tech]}
+                    alt={`${tech} logo`}
+                    className="technology-logo"
+                    data-tech={tech.toLowerCase().replace(/\s+/g, "-")}
+                  />
+                )}
+                <span className="technology-name">{tech}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
