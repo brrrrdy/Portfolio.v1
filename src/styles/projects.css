@@ -64,7 +64,7 @@
   height: 280px;
   object-fit: cover;
   margin-bottom: 1rem;
-  filter: blur(30px);
+  filter: blur(15px);
   transition:
     filter 0.3s ease,
     transform 0.3s ease;
