@@ -30,7 +30,7 @@
   margin: 0 0 2rem 0;
   padding: 1.5rem;
   border: 2px solid var(--card-border);
-  background-color: var(--alternate-background);
+  background-color: transparent;
   position: relative;
   display: flex;
   flex-direction: column;
