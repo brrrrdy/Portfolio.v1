@@ -3,7 +3,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Colors from "./Colors";
 
 function TopNav() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+    // Initialize theme from localStorage or default to "light"
+    return localStorage.getItem("portfolio-theme") || "light";
+  });
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -37,9 +40,10 @@ function TopNav() {
     }
   };
 
-  // Apply theme to root element
+  // Apply theme to root element and save to localStorage
   useEffect(() => {
     document.body.className = `app-${theme}`;
+    localStorage.setItem("portfolio-theme", theme);
   }, [theme]);
 
   return (

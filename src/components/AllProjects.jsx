@@ -2,11 +2,13 @@ import { useEffect } from "react";
 import TopNav from "./TopNav";
 import Footer from "./Footer";
 import projectsData from "../content/projects.json";
+import projectsCopyData from "../content/projectsCopy.json";
 import "../styles/allprojects.css";
 import githubIcon from "../assets/images/github-original.svg?url";
 
 export default function AllProjects() {
   const { projects } = projectsData;
+  const { projectsCopy } = projectsCopyData;
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -21,6 +23,7 @@ export default function AllProjects() {
       <section id="all-projects">
         <div className="projects-container">
           <h1>all projects</h1>
+          <div className="intro-box">{projectsCopy}</div>
           <div className="projects-table-wrapper">
             <table className="projects-table">
               <thead>
