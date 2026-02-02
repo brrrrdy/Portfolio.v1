@@ -1,23 +1,18 @@
 import "./index.css";
-import TopNav from "./components/TopNav";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./components/Homepage";
+import AllProjects from "./components/AllProjects";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="app">
-      <TopNav />
-      <section id="about">
-        <Hero />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="contact">
-        <Footer />
-      </section>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects" element={<AllProjects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

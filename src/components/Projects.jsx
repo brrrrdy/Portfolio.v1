@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { projects } from "../content/projects.json";
 import Card from "../helpers/Card";
 import Toolkit from "./Toolkit";
@@ -21,7 +22,6 @@ function Projects() {
       selectedTechs.every((tech) => project.tags.includes(tech)),
     );
     displayProjects = getRandomProjects(filteredProjects, 4);
-
     if (selectedTechs.length === 1) {
       galleryTitle = `my projects that use ${selectedTechs[0]}`;
     } else {
@@ -48,14 +48,13 @@ function Projects() {
               ))}
             </div>
             <div className="see-more-container">
-              <a href="/all-projects" className="btn-primary">
+              <Link to="/projects" className="btn-primary">
                 Click to see all my projects
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-
       <div className="Toolkit" id="toolkit">
         <Toolkit
           selectedTechs={selectedTechs}

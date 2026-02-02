@@ -1,15 +1,41 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import Colors from "./Colors";
 
 function TopNav() {
   const [theme, setTheme] = useState("light");
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
-    { href: "#about", text: "About" },
-    { href: "#projects", text: "Projects" },
-    { href: "#toolkit", text: "Toolkit" },
-    { href: "#contact", text: "Contact" },
+    { href: "#about", text: "About", type: "scroll" },
+    { href: "#projects", text: "Projects", type: "scroll" },
+    { href: "#toolkit", text: "Toolkit", type: "scroll" },
+    { href: "/contact", text: "Contact", type: "navigate" },
   ];
+
+  const handleNavClick = (link) => {
+    if (link.type === "navigate") {
+      // Navigate to a different page
+      navigate(link.href);
+    } else if (location.pathname !== "/") {
+      // If not on homepage, navigate to homepage first, then scroll
+      navigate("/");
+      // Use setTimeout to wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const element = document.querySelector(link.href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // If already on homepage, just scroll to section
+      const element = document.querySelector(link.href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   // Apply theme to root element
   useEffect(() => {
@@ -29,9 +55,21 @@ function TopNav() {
         {/* center - nav links */}
         <div className="nav-links">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="nav-link">
+            <button
+              key={link.href}
+              onClick={() => handleNavClick(link)}
+              className="nav-link"
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontSize: "inherit",
+                fontFamily: "inherit",
+                fontWeight: "inherit",
+              }}
+            >
               {link.text}
-            </a>
+            </button>
           ))}
         </div>
 
