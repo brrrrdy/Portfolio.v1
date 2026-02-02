@@ -1,0 +1,54 @@
+/* Contact Page Styles */
+#contact-page {
+  scroll-margin-top: 80px;
+  padding-top: 3rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto 2.5rem auto;
+  max-width: 100%;
+}
+
+.contact-container h1 {
+  font-size: 2rem;
+  margin: 0 0 2rem 0;
+  text-align: left;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--dark-text);
+}
+
+.contact-content {
+  width: 100%;
+  max-width: 1200px;
+  text-align: left;
+  line-height: 1.6;
+  color: var(--dark-text);
+  font-size: 1rem;
+}
+
+.contact-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 0 1rem;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .contact-container h1 {
+    font-size: 1.75rem;
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
+}
