@@ -55,6 +55,15 @@ section {
   padding-top: 60px;
 }
 
+/* Light theme multi-gradient background */
+.app-light {
+  background:
+    linear-gradient(red, transparent),
+    linear-gradient(to top left, lime, transparent),
+    linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+}
+
 /* UNIVERSAL SECTION LAYOUT */
 
 .section-container {
