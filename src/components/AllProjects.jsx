@@ -9,7 +9,10 @@ export default function AllProjects() {
   const { projects } = projectsData;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   }, []);
 
   return (
@@ -25,7 +28,8 @@ export default function AllProjects() {
                   <th>Title</th>
                   <th>Description</th>
                   <th>Tags</th>
-                  <th>GitHub Page</th>
+                  <th>Year</th>
+                  <th>GitHub Repo</th>
                 </tr>
               </thead>
               <tbody>
@@ -33,7 +37,7 @@ export default function AllProjects() {
                   <tr key={project.id}>
                     <td>
                       <a
-                        href={project.HTMLlink[0]}
+                        href={project.ghPage[0]}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="project-title-link"
@@ -51,9 +55,12 @@ export default function AllProjects() {
                         ))}
                       </div>
                     </td>
+
+                    <td className="year-cell">{project.year}</td>
+
                     <td>
                       <a
-                        href={project.ghPage[0]}
+                        href={project.HTMLlink[0]}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="github-page-link"
