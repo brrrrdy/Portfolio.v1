@@ -11,6 +11,7 @@ function TopNav() {
   const location = useLocation();
 
   const navLinks = [
+    { href: "#home", text: "Home", type: "scroll" },
     { href: "#about", text: "About", type: "scroll" },
     { href: "#projects", text: "Projects", type: "scroll" },
     { href: "#toolkit", text: "Toolkit", type: "scroll" },

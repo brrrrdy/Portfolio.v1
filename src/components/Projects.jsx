@@ -49,7 +49,7 @@ function Projects() {
             </div>
             <div className="see-more-container">
               <Link to="/projects" className="btn-primary">
-                Click to see all my projects
+                see all my projects
               </Link>
             </div>
           </div>
