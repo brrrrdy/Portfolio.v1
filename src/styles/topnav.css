@@ -68,22 +68,31 @@
   gap: 1rem;
 }
 
-.lang-btn {
+/* Language Selector Styles */
+.language-selector {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.language-button {
+  background: transparent;
+  border: 1px solid transparent;
   color: var(--dark-text);
-  border: none;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.25rem;
   cursor: pointer;
   font-weight: 500;
-  font-size: 1rem;
-  background: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
   transition: all 0.2s ease;
 }
 
-.lang-btn:hover {
+.language-button:hover {
   color: orangered;
-  transform: translateY(-1px);
-  background: none;
+  transform: translateY(-2px);
+}
+
+.language-button.active {
+  color: orangered;
 }
 
 /* responsive */
@@ -200,6 +209,15 @@
   .language-buttons {
     gap: 0.3rem;
     padding-right: 0;
+  }
+
+  .language-selector {
+    gap: 0.2rem;
+  }
+
+  .language-button {
+    font-size: clamp(0.75rem, 2.2vw, 0.875rem);
+    padding: clamp(0.2rem, 1vw, 0.25rem) clamp(0.5rem, 2vw, 0.75rem);
   }
 
   .lang-btn {

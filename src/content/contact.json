@@ -1,35 +1,107 @@
 {
-  "title": "contact",
-  "intro": "Do get in touch.",
-  "email": {
-    "address": "tom@tomalvarez.xyz"
-  },
-  "phoneNumbers": [
-    {
-      "country": "Spain",
-      "number": "+34 666 666 666",
-      "telLink": "+34666666666",
-      "flags": [
-        {
-          "src": "/src/assets/images/proj_images/Flag_of_Spain_Flat_Round_Corner-64x64.png",
-          "alt": "Spain flag"
-        },
-        {
-          "src": "/src/assets/images/proj_images/Flag_of_Galicia_Flat_Round_Corner-64x64.png",
-          "alt": "Galicia flag"
-        }
-      ]
+  "en": {
+    "title": "contact",
+    "intro": "Get in touch - I'd love to hear from you!",
+    "email": {
+      "address": "tom@tomalvarez.xyz"
     },
-    {
-      "country": "UK",
-      "number": "+44 07553706704",
-      "telLink": "+4407553706704",
-      "flags": [
-        {
-          "src": "/src/assets/images/proj_images/Flag_of_United_Kingdom_Flat_Round_Corner-64x64.png",
-          "alt": "UK flag"
-        }
-      ]
-    }
-  ]
+    "phoneNumbers": [
+      {
+        "country": "Spain",
+        "number": "+34 666 666 666",
+        "telLink": "+34666666666",
+        "flags": [
+          {
+            "src": "/src/assets/images/proj_images/Flag_of_Spain_Flat_Round_Corner-64x64.png",
+            "alt": "Spain flag"
+          },
+          {
+            "src": "/src/assets/images/proj_images/Flag_of_Galicia_Flat_Round_Corner-64x64.png",
+            "alt": "Galicia flag"
+          }
+        ]
+      },
+      {
+        "country": "UK",
+        "number": "+44 07553706704",
+        "telLink": "+4407553706704",
+        "flags": [
+          {
+            "src": "/src/assets/images/proj_images/Flag_of_United_Kingdom_Flat_Round_Corner-64x64.png",
+            "alt": "UK flag"
+          }
+        ]
+      }
+    ]
+  },
+  "es": {
+    "title": "contacto",
+    "intro": "¡Ponte en contacto conmigo - me encantaría saber de ti!",
+    "email": {
+      "address": "tom@tomalvarez.xyz"
+    },
+    "phoneNumbers": [
+      {
+        "country": "España",
+        "number": "+34 666 666 666",
+        "telLink": "+34666666666",
+        "flags": [
+          {
+            "src": "/src/assets/images/proj_images/Flag_of_Spain_Flat_Round_Corner-64x64.png",
+            "alt": "Bandera de España"
+          },
+          {
+            "src": "/src/assets/images/proj_images/Flag_of_Galicia_Flat_Round_Corner-64x64.png",
+            "alt": "Bandera de Galicia"
+          }
+        ]
+      },
+      {
+        "country": "Reino Unido",
+        "number": "+44 07553706704",
+        "telLink": "+4407553706704",
+        "flags": [
+          {
+            "src": "/src/assets/images/proj_images/Flag_of_United_Kingdom_Flat_Round_Corner-64x64.png",
+            "alt": "Bandera del Reino Unido"
+          }
+        ]
+      }
+    ]
+  },
+  "gz": {
+    "title": "contacto",
+    "intro": "Ponte en contacto comigo - encantaríame saber de ti!",
+    "email": {
+      "address": "tom@tomalvarez.xyz"
+    },
+    "phoneNumbers": [
+      {
+        "country": "España",
+        "number": "+34 666 666 666",
+        "telLink": "+34666666666",
+        "flags": [
+          {
+            "src": "/src/assets/images/proj_images/Flag_of_Spain_Flat_Round_Corner-64x64.png",
+            "alt": "Bandeira de España"
+          },
+          {
+            "src": "/src/assets/images/proj_images/Flag_of_Galicia_Flat_Round_Corner-64x64.png",
+            "alt": "Bandeira de Galicia"
+          }
+        ]
+      },
+      {
+        "country": "Reino Unido",
+        "number": "+44 07553706704",
+        "telLink": "+4407553706704",
+        "flags": [
+          {
+            "src": "/src/assets/images/proj_images/Flag_of_United_Kingdom_Flat_Round_Corner-64x64.png",
+            "alt": "Bandeira do Reino Unido"
+          }
+        ]
+      }
+    ]
+  }
 }

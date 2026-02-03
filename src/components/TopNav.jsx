@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Colors from "./Colors";
+import LanguageSelector from "./LanguageSelector";
 
 function TopNav() {
   const [theme, setTheme] = useState(() => {
@@ -78,15 +79,9 @@ function TopNav() {
           ))}
         </div>
 
-        {/* right side - language buttons */}
+        {/* right side - language selector */}
         <div className="nav-right">
-          <div className="language-buttons">
-            {["EN", "ES", "GZ"].map((lang) => (
-              <button key={lang} className={`lang-btn lang-${lang}`}>
-                {lang}
-              </button>
-            ))}
-          </div>
+          <LanguageSelector />
         </div>
       </div>
     </nav>
