@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import TopNav from "./TopNav";
 import Footer from "./Footer";
+import contactData from "../content/contact.json";
 import "../styles/contact.css";
 
 export default function Contact() {
@@ -16,44 +17,36 @@ export default function Contact() {
       <TopNav />
       <section id="contact-page">
         <div className="contact-container">
-          <h1>contact</h1>
+          <h1>{contactData.title}</h1>
           <div className="contact-content">
-            <p>Get in touch - I'd love to hear from you!</p>
+            <p>{contactData.intro}</p>
 
             <div className="contact-info">
               <div className="contact-item">
                 <h3>Email</h3>
-                <a href="mailto:tom@tomalvarez.xyz">tom@tomalvarez.xyz</a>
+                <a href={`mailto:${contactData.email.address}`}>
+                  {contactData.email.address}
+                </a>
               </div>
 
               <div className="contact-item">
                 <h3>Phone</h3>
                 <div className="phone-numbers">
-                  <div className="phone-number">
-                    <div className="flag-container">
-                      <img
-                        src="/src/assets/images/proj_images/Flag_of_Spain_Flat_Round_Corner-64x64.png"
-                        alt="Spain flag"
-                        className="flag-icon"
-                      />
-                      <img
-                        src="/src/assets/images/proj_images/Flag_of_Galicia_Flat_Round_Corner-64x64.png"
-                        alt="Galicia flag"
-                        className="flag-icon"
-                      />
+                  {contactData.phoneNumbers.map((phone, index) => (
+                    <div key={index} className="phone-number">
+                      <div className="flag-container">
+                        {phone.flags.map((flag, flagIndex) => (
+                          <img
+                            key={flagIndex}
+                            src={flag.src}
+                            alt={flag.alt}
+                            className="flag-icon"
+                          />
+                        ))}
+                      </div>
+                      <a href={`tel:${phone.telLink}`}>{phone.number}</a>
                     </div>
-                    <a href="tel:+34666666666">+34 666 666 666</a>
-                  </div>
-                  <div className="phone-number">
-                    <div className="flag-container">
-                      <img
-                        src="/src/assets/images/proj_images/Flag_of_United_Kingdom_Flat_Round_Corner-64x64.png"
-                        alt="UK flag"
-                        className="flag-icon"
-                      />
-                    </div>
-                    <a href="tel:+4407553706704">+44 07777777777</a>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>

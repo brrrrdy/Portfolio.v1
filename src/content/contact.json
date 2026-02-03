@@ -1,0 +1,35 @@
+{
+  "title": "contact",
+  "intro": "Do get in touch.",
+  "email": {
+    "address": "tom@tomalvarez.xyz"
+  },
+  "phoneNumbers": [
+    {
+      "country": "Spain",
+      "number": "+34 666 666 666",
+      "telLink": "+34666666666",
+      "flags": [
+        {
+          "src": "/src/assets/images/proj_images/Flag_of_Spain_Flat_Round_Corner-64x64.png",
+          "alt": "Spain flag"
+        },
+        {
+          "src": "/src/assets/images/proj_images/Flag_of_Galicia_Flat_Round_Corner-64x64.png",
+          "alt": "Galicia flag"
+        }
+      ]
+    },
+    {
+      "country": "UK",
+      "number": "+44 07553706704",
+      "telLink": "+4407553706704",
+      "flags": [
+        {
+          "src": "/src/assets/images/proj_images/Flag_of_United_Kingdom_Flat_Round_Corner-64x64.png",
+          "alt": "UK flag"
+        }
+      ]
+    }
+  ]
+}
