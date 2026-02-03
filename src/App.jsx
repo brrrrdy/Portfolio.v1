@@ -6,9 +6,12 @@ import AllProjects from "./components/AllProjects";
 import Contact from "./components/Contact";
 
 function App() {
+  // Use different basename for development vs production
+  const basename = import.meta.env.DEV ? "/" : "/Portfolio.v1";
+  
   return (
     <LanguageProvider>
-      <BrowserRouter basename="/Portfolio.v1">
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<AllProjects />} />
