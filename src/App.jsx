@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/Portfolio.v1">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<AllProjects />} />
