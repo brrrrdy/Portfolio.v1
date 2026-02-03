@@ -39,6 +39,85 @@
   margin-bottom: 1.5rem;
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin: 0;
+}
+
+.contact-item a {
+  color: var(--accent-color, #007acc);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: var(--accent-hover, #005fa3);
+  text-decoration: underline;
+}
+
+.phone-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.phone-number .flag-container {
+  display: flex;
+  gap: 0.25rem;
+  min-width: 52px; /* Space for two 24px flags plus gap */
+  align-items: center;
+}
+
+.phone-number .flag-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.phone-number a {
+  flex: 1;
+  color: var(--accent-color, #007acc);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+  min-width: 0;
+}
+
+.phone-number a:hover {
+  color: var(--accent-hover, #005fa3);
+  text-decoration: underline;
+}
+
+.country {
+  font-weight: 500;
+  color: var(--dark-text);
+  min-width: 60px;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .contact-container {
@@ -50,5 +129,36 @@
     font-size: 1.75rem;
     margin: 0 0 1rem 0;
     padding: 0;
+  }
+
+  .contact-info {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .contact-item a {
+    font-size: 1rem;
+  }
+
+  .phone-number {
+    gap: 0.5rem;
+  }
+
+  .phone-number .flag-container {
+    min-width: 44px; /* Space for two 20px flags plus gap on mobile */
+  }
+
+  .phone-number .flag-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .phone-number a {
+    font-size: 1rem;
+  }
+
+  .country {
+    min-width: 50px;
+    font-size: 0.9rem;
   }
 }
