@@ -73,6 +73,18 @@
   display: flex;
   gap: 0.25rem;
   align-items: center;
+  position: relative;
+}
+
+/* Desktop layout */
+.language-selector-mobile {
+  display: none;
+}
+
+.language-selector-desktop {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
 }
 
 .language-button {
@@ -93,6 +105,66 @@
 
 .language-button.active {
   color: orangered;
+}
+
+/* Dropdown styles for mobile */
+.language-dropdown-toggle {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--dark-text);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.language-dropdown-toggle:hover {
+  color: orangered;
+  transform: translateY(-2px);
+}
+
+.dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.language-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 60px;
+}
+
+.language-dropdown-item {
+  background: transparent;
+  border: none;
+  color: var(--dark-text);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.2s ease;
+  display: block;
+}
+
+.language-dropdown-item:hover {
+  background: rgba(255, 69, 0, 0.1);
+  color: orangered;
+}
+
+.language-dropdown-item.active {
+  color: orangered;
+  background: rgba(255, 69, 0, 0.05);
 }
 
 /* responsive */
@@ -220,6 +292,11 @@
     padding: clamp(0.2rem, 1vw, 0.25rem) clamp(0.5rem, 2vw, 0.75rem);
   }
 
+  .language-dropdown-toggle {
+    font-size: clamp(0.75rem, 2.2vw, 0.875rem);
+    padding: clamp(0.2rem, 1vw, 0.25rem) clamp(0.5rem, 2vw, 0.75rem);
+  }
+
   .lang-btn {
     font-size: 0.65rem;
     padding: 0.2rem 0.4rem;
@@ -229,5 +306,58 @@
     width: 2rem;
     height: 2rem;
     font-size: 1rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 677px) {
+  .nav-links {
+    gap: 0.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.3rem;
+  }
+
+  /* Switch to dropdown on small devices */
+  .language-selector-desktop {
+    display: none;
+  }
+
+  .language-selector-mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .language-dropdown-toggle {
+    font-size: 0.55rem;
+    padding: 0.15rem 0.3rem;
+  }
+
+  .language-dropdown-menu {
+    min-width: 50px;
+  }
+
+  .language-dropdown-item {
+    font-size: 0.55rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .dropdown-arrow {
+    font-size: 0.5rem;
+  }
+
+  .top-nav-container {
+    padding: 0 0.3rem;
+  }
+
+  .nav-left {
+    left: 0.3rem;
+  }
+
+  .nav-right {
+    right: 0.3rem;
+    gap: 0.5rem;
   }
 }
