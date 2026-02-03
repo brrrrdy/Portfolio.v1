@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 function App() {
   // Use different basename for development vs production
   const basename = import.meta.env.DEV ? "/" : "/Portfolio.v1";
-  
+
   return (
     <LanguageProvider>
       <BrowserRouter basename={basename}>
