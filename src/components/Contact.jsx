@@ -3,6 +3,7 @@ import TopNav from "./TopNav";
 import Footer from "./Footer";
 import { useLanguage } from "./LanguageContext";
 import contactData from "../content/contact.json";
+import { flagImages } from "../assets/images/projectImages";
 import "../styles/contact.css";
 
 export default function Contact() {
@@ -38,11 +39,11 @@ export default function Contact() {
                   {content.phoneNumbers.map((phone, index) => (
                     <div key={index} className="phone-number">
                       <div className="flag-container">
-                        {phone.flags.map((flag, flagIndex) => (
+                        {phone.flags.map((flagKey, flagIndex) => (
                           <img
                             key={flagIndex}
-                            src={flag.src}
-                            alt={flag.alt}
+                            src={flagImages[flagKey]}
+                            alt={`${flagKey} flag`}
                             className="flag-icon"
                           />
                         ))}
