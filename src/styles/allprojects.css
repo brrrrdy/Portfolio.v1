@@ -131,6 +131,9 @@
     font-size: 1.75rem;
     margin: 0 0 1rem 0;
     padding: 0;
+  }
+
+  .projects-table {
     font-size: 12px;
   }
 
@@ -145,5 +148,43 @@
 
   .tag {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 0 0.5rem;
+  }
+
+  .projects-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .projects-table {
+    font-size: 11px;
+  }
+
+  .projects-table th,
+  .projects-table td {
+    padding: 0.4rem 0.3rem;
+  }
+
+  .description-cell {
+    max-width: 150px;
+    font-size: 10px;
+  }
+
+  .tag {
+    font-size: 9px;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .year-cell {
+    font-size: 10px;
+  }
+
+  .github-icon {
+    width: 20px;
+    height: 20px;
   }
 }

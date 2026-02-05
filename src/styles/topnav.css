@@ -136,8 +136,8 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background: transparent;
-  border: 1px solid transparent;
+  background: var(--alternate-background);
+  border: 1px solid var(--border-color);
   border-radius: 0.25rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -145,7 +145,7 @@
 }
 
 .language-dropdown-item {
-  background: transparent;
+  background: var(--bg-primary);
   border: none;
   color: var(--dark-text);
   cursor: pointer;
