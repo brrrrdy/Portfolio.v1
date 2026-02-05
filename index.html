@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,9 +8,19 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <title>portfoliov2</title>
-    <script type="module" crossorigin src="/Portfolio.v1/assets/index-D5D0reQu.js"></script>
-    <link rel="stylesheet" crossorigin href="/Portfolio.v1/assets/index--AKhPg2R.css">
+    <title>tom alvarez - web developer</title>
+    <script>
+      // Restore the path after 404 redirect
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.pathname) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-DhP_gpeY.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CyPA7XYm.css">
   </head>
   <body>
     <div id="root"></div>
