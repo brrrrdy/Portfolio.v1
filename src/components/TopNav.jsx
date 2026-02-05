@@ -8,6 +8,7 @@ function TopNav() {
     // Initialize theme from localStorage or default to "light"
     return localStorage.getItem("portfolio-theme") || "light";
   });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -20,6 +21,9 @@ function TopNav() {
   ];
 
   const handleNavClick = (link) => {
+    // Close mobile menu when a link is clicked
+    setIsMobileMenuOpen(false);
+
     if (link.type === "navigate") {
       // Navigate to a different page
       navigate(link.href);
@@ -58,8 +62,8 @@ function TopNav() {
           </div>
         </div>
 
-        {/* center - nav links */}
-        <div className="nav-links">
+        {/* center - nav links (desktop) */}
+        <div className="nav-links nav-links-desktop">
           {navLinks.map((link) => (
             <button
               key={link.href}
@@ -79,9 +83,51 @@ function TopNav() {
           ))}
         </div>
 
-        {/* right side - language selector */}
+        {/* right side - burger menu and language selector */}
         <div className="nav-right">
+          {/* Burger menu button */}
+          <button
+            className="burger-menu-button"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`burger-line ${isMobileMenuOpen ? "open" : ""}`}
+            ></span>
+            <span
+              className={`burger-line ${isMobileMenuOpen ? "open" : ""}`}
+            ></span>
+            <span
+              className={`burger-line ${isMobileMenuOpen ? "open" : ""}`}
+            ></span>
+          </button>
+
           <LanguageSelector />
+        </div>
+      </div>
+
+      {/* Mobile dropdown menu */}
+      <div
+        className={`mobile-menu ${isMobileMenuOpen ? "mobile-menu-open" : ""}`}
+      >
+        <div className="mobile-menu-items">
+          {navLinks.map((link) => (
+            <button
+              key={link.href}
+              onClick={() => handleNavClick(link)}
+              className="mobile-nav-link"
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontSize: "inherit",
+                fontFamily: "inherit",
+                fontWeight: "inherit",
+              }}
+            >
+              {link.text}
+            </button>
+          ))}
         </div>
       </div>
     </nav>
