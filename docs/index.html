@@ -9,6 +9,16 @@
       rel="stylesheet"
     />
     <title>portfoliov2</title>
+    <script>
+      // Restore the path after 404 redirect
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.pathname) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="/assets/index-CAmfyC7M.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index--AKhPg2R.css">
   </head>
