@@ -53,15 +53,20 @@ section {
     background-color 0.5s ease,
     color 0.5s ease;
   padding-top: 60px;
+  position: relative;
 }
 
-/* Light theme multi-gradient background */
-.app-light {
+/* Light theme multi-gradient background - works on all platforms including iOS */
+body.app-light .app {
   background:
-    linear-gradient(red, transparent),
-    linear-gradient(to top left, lime, transparent),
-    linear-gradient(to top right, blue, transparent);
+    linear-gradient(180deg, rgba(255, 0, 0, 1), transparent),
+    linear-gradient(135deg, rgba(0, 255, 0, 1), transparent),
+    linear-gradient(225deg, rgba(0, 0, 255, 1), transparent);
+  background-color: #c8afaf;
   background-blend-mode: screen;
+  /* iOS Safari compatibility */
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
 }
 
 /* UNIVERSAL SECTION LAYOUT */
