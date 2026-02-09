@@ -4,6 +4,9 @@ import Footer from "./Footer";
 import { useLanguage } from "./LanguageContext";
 import contactData from "../content/contact.json";
 import { flagImages } from "../assets/images/projectImages";
+import mailIcon from "../assets/images/mail_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg";
+import phoneIcon from "../assets/images/call_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg";
+import locationIcon from "../assets/images/globe_location_pin_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg";
 import "../styles/contact.css";
 
 export default function Contact() {
@@ -27,30 +30,53 @@ export default function Contact() {
 
             <div className="contact-info">
               <div className="contact-item">
-                <h3>{content.emailLabel}</h3>
-                <a href={`mailto:${content.email.address}`}>
-                  {content.email.address}
-                </a>
+                <img
+                  src={mailIcon}
+                  alt={content.emailLabel}
+                  className="contact-icon"
+                />
+                <div className="contact-item-content">
+                  <a href={`mailto:${content.email.address}`}>
+                    {content.email.address}
+                  </a>
+                </div>
               </div>
 
               <div className="contact-item">
-                <h3>{content.phoneLabel}</h3>
-                <div className="phone-numbers">
-                  {content.phoneNumbers.map((phone, index) => (
-                    <div key={index} className="phone-number">
-                      <div className="flag-container">
-                        {phone.flags.map((flagKey, flagIndex) => (
-                          <img
-                            key={flagIndex}
-                            src={flagImages[flagKey]}
-                            alt={`${flagKey} flag`}
-                            className="flag-icon"
-                          />
-                        ))}
+                <img
+                  src={phoneIcon}
+                  alt={content.phoneLabel}
+                  className="contact-icon"
+                />
+                <div className="contact-item-content">
+                  <div className="phone-numbers">
+                    {content.phoneNumbers.map((phone, index) => (
+                      <div key={index} className="phone-number">
+                        <div className="flag-container">
+                          {phone.flags.map((flagKey, flagIndex) => (
+                            <img
+                              key={flagIndex}
+                              src={flagImages[flagKey]}
+                              alt={`${flagKey} flag`}
+                              className="flag-icon"
+                            />
+                          ))}
+                        </div>
+                        <a href={`tel:${phone.telLink}`}>{phone.number}</a>
                       </div>
-                      <a href={`tel:${phone.telLink}`}>{phone.number}</a>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="contact-item">
+                <img
+                  src={locationIcon}
+                  alt={content.locationLabel}
+                  className="contact-icon"
+                />
+                <div className="contact-item-content">
+                  <p>{content.location}</p>
                 </div>
               </div>
             </div>
