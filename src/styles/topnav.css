@@ -261,11 +261,18 @@
   transition: all 0.2s ease;
   text-align: left;
   width: 100%;
+  position: relative;
 }
 
 .mobile-nav-link:hover {
   color: orangered;
-  background: rgba(255, 69, 0, 0.1);
+  background: rgba(255, 69, 0, 0.15);
+  transform: translateX(4px);
+}
+
+.mobile-nav-link:active {
+  background: rgba(255, 69, 0, 0.25);
+  transform: translateX(2px);
 }
 
 /* ========================================

@@ -32,16 +32,24 @@ function TopNav() {
       navigate("/");
       // Use setTimeout to wait for navigation to complete before scrolling
       setTimeout(() => {
+        if (link.href === "#home") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          const element = document.querySelector(link.href);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }, 100);
+    } else {
+      // If already on homepage, scroll to section or top
+      if (link.href === "#home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
         const element = document.querySelector(link.href);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 100);
-    } else {
-      // If already on homepage, just scroll to section
-      const element = document.querySelector(link.href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
