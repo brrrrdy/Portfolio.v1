@@ -27,14 +27,14 @@ export default function Contact() {
 
             <div className="contact-info">
               <div className="contact-item">
-                <h3>Email</h3>
+                <h3>{content.emailLabel}</h3>
                 <a href={`mailto:${content.email.address}`}>
                   {content.email.address}
                 </a>
               </div>
 
               <div className="contact-item">
-                <h3>Phone</h3>
+                <h3>{content.phoneLabel}</h3>
                 <div className="phone-numbers">
                   {content.phoneNumbers.map((phone, index) => (
                     <div key={index} className="phone-number">

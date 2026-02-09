@@ -2,6 +2,8 @@
   "en": {
     "title": "contact",
     "intro": "Get in touch - I'd love to hear from you!",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
     "email": {
       "address": "tom@tomalvarez.xyz"
     },
@@ -23,6 +25,8 @@
   "es": {
     "title": "contacto",
     "intro": "¡Ponte en contacto conmigo - me encantaría saber de ti!",
+    "emailLabel": "Correo electrónico",
+    "phoneLabel": "Teléfono",
     "email": {
       "address": "tom@tomalvarez.xyz"
     },
@@ -44,6 +48,8 @@
   "gz": {
     "title": "contacto",
     "intro": "Ponte en contacto comigo - encantaríame saber de ti!",
+    "emailLabel": "Correo electrónico",
+    "phoneLabel": "Teléfono",
     "email": {
       "address": "tom@tomalvarez.xyz"
     },
