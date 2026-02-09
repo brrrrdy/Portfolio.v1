@@ -118,6 +118,18 @@
   text-decoration: underline;
 }
 
+.footer-sitemap button {
+  color: var(--light-text);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.footer-sitemap button:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 .footer-social {
   padding: 2rem;
   text-align: left;

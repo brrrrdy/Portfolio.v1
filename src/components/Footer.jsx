@@ -1,8 +1,40 @@
+import { useNavigate, useLocation } from "react-router-dom";
 import githubLogo from "../assets/images/github-original.svg";
 import linkedinLogo from "../assets/images/linkedin.svg";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const footerLinks = [
+    { href: "#about", text: "About" },
+    { href: "#projects", text: "Projects" },
+    { href: "#toolkit", text: "Toolkit" },
+    { href: "/contact", text: "Contact" },
+  ];
+
+  const handleNavClick = (link) => {
+    if (link.href.startsWith("/")) {
+      // Navigate to a different page
+      navigate(link.href);
+    } else if (location.pathname !== "/") {
+      // If not on homepage, navigate to homepage first, then scroll
+      navigate("/");
+      setTimeout(() => {
+        const element = document.querySelector(link.href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // If already on homepage, just scroll to section
+      const element = document.querySelector(link.href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <footer className="footer">
@@ -16,18 +48,24 @@ function Footer() {
             <div className="footer-sitemap-container">
               <div className="footer-sitemap">
                 <ul>
-                  <li>
-                    <a href="#about">About</a>
-                  </li>
-                  <li>
-                    <a href="#projects">Projects</a>
-                  </li>
-                  <li>
-                    <a href="#toolkit">Toolkit</a>
-                  </li>
-                  <li>
-                    <a href="#contact">Contact</a>
-                  </li>
+                  {footerLinks.map((link) => (
+                    <li key={link.href}>
+                      <button
+                        onClick={() => handleNavClick(link)}
+                        style={{
+                          background: "none",
+                          border: "none",
+                          cursor: "pointer",
+                          fontSize: "inherit",
+                          fontFamily: "inherit",
+                          color: "inherit",
+                          padding: 0,
+                        }}
+                      >
+                        {link.text}
+                      </button>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
