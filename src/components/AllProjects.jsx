@@ -1,14 +1,15 @@
 import { useEffect } from "react";
 import TopNav from "./TopNav";
 import Footer from "./Footer";
+import { useLanguage } from "./LanguageContext";
 import projectsData from "../content/projects.json";
-import projectsCopyData from "../content/projectsCopy.json";
 import "../styles/allprojects.css";
 import githubIcon from "../assets/images/github-original.svg?url";
 
 export default function AllProjects() {
-  const { projects } = projectsData;
-  const { projectsCopy } = projectsCopyData;
+  const { projects, pageCopy } = projectsData;
+  const { language } = useLanguage();
+  const content = pageCopy[language] || pageCopy.en;
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
@@ -22,17 +23,17 @@ export default function AllProjects() {
       <TopNav />
       <section id="all-projects">
         <div className="projects-container">
-          <h1>all projects</h1>
-          <div className="intro-box">{projectsCopy}</div>
+          <h1>{content.pageTitle}</h1>
+          <div className="intro-box">{content.intro}</div>
           <div className="projects-table-wrapper">
             <table className="projects-table">
               <thead>
                 <tr>
-                  <th>Title</th>
-                  <th>Description</th>
-                  <th>Tags</th>
-                  <th>Year</th>
-                  <th>GitHub Repo</th>
+                  <th>{content.tableHeaders.title}</th>
+                  <th>{content.tableHeaders.description}</th>
+                  <th>{content.tableHeaders.tags}</th>
+                  <th>{content.tableHeaders.year}</th>
+                  <th>{content.tableHeaders.github}</th>
                 </tr>
               </thead>
               <tbody>
@@ -45,10 +46,12 @@ export default function AllProjects() {
                         rel="noopener noreferrer"
                         className="project-title-link"
                       >
-                        {project.title}
+                        {project.title[language] || project.title.en}
                       </a>
                     </td>
-                    <td className="description-cell">{project.description}</td>
+                    <td className="description-cell">
+                      {project.description[language] || project.description.en}
+                    </td>
                     <td>
                       <div className="tags-container">
                         {project.tags.map((tag, index) => (
@@ -67,7 +70,7 @@ export default function AllProjects() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="github-page-link"
-                        aria-label={`View live demo of ${project.title}`}
+                        aria-label={`View live demo of ${project.title[language] || project.title.en}`}
                       >
                         <img
                           src={githubIcon}

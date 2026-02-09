@@ -1,9 +1,69 @@
 {
+  "ui": {
+    "en": {
+      "myProjects": "my projects",
+      "myProjectsThatUse": "my projects that use",
+      "seeAllProjects": "see all my projects"
+    },
+    "es": {
+      "myProjects": "mis proyectos",
+      "myProjectsThatUse": "mis proyectos que usan",
+      "seeAllProjects": "ver todos mis proyectos"
+    },
+    "gz": {
+      "myProjects": "os meus proxectos",
+      "myProjectsThatUse": "os meus proxectos que usan",
+      "seeAllProjects": "ver todos os meus proxectos"
+    }
+  },
+  "pageCopy": {
+    "en": {
+      "pageTitle": "all projects",
+      "intro": "A selection of the work I'm most proud of. Each project highlights my skills in web development, from clean, responsive design to interactive functionality. Here, you'll see how I turn ideas into practical solutions, experimenting with modern tools and frameworks like JavaScript, React, and Tailwind CSS. Whether it's a personal experiment, a portfolio piece, or a complex application, each project reflects my passion for problem-solving and continuous learning. Dive in to explore the projects and the code behind them.",
+      "tableHeaders": {
+        "title": "Title",
+        "description": "Description",
+        "tags": "Tags",
+        "year": "Year",
+        "github": "GitHub Repo"
+      }
+    },
+    "es": {
+      "pageTitle": "todos los proyectos",
+      "intro": "Una selección del trabajo del que estoy más orgulloso. Cada proyecto destaca mis habilidades en desarrollo web, desde diseño limpio y responsivo hasta funcionalidad interactiva. Aquí verás cómo convierto ideas en soluciones prácticas, experimentando con herramientas y frameworks modernos como JavaScript, React y Tailwind CSS. Ya sea un experimento personal, una pieza de portafolio o una aplicación compleja, cada proyecto refleja mi pasión por resolver problemas y el aprendizaje continuo. Sumérgete para explorar los proyectos y el código detrás de ellos.",
+      "tableHeaders": {
+        "title": "Título",
+        "description": "Descripción",
+        "tags": "Etiquetas",
+        "year": "Año",
+        "github": "Repositorio GitHub"
+      }
+    },
+    "gz": {
+      "pageTitle": "todos os proxectos",
+      "intro": "Unha selección do traballo do que estou máis orgulloso. Cada proxecto destaca as miñas habilidades no desenvolvemento web, desde deseño limpo e responsivo ata funcionalidade interactiva. Aquí verás como converto ideas en solucións prácticas, experimentando con ferramentas e frameworks modernos como JavaScript, React e Tailwind CSS. Sexa un experimento persoal, unha peza de portafolio ou unha aplicación complexa, cada proxecto reflicte a miña paixón por resolver problemas e a aprendizaxe continua. Mergúllate para explorar os proxectos e o código detrás deles.",
+      "tableHeaders": {
+        "title": "Título",
+        "description": "Descrición",
+        "tags": "Etiquetas",
+        "year": "Ano",
+        "github": "Repositorio GitHub"
+      }
+    }
+  },
   "projects": [
     {
       "id": 11,
-      "title": "Portfolio Page",
-      "description": "This very website!",
+      "title": {
+        "en": "Portfolio Page",
+        "es": "Página de Portafolio",
+        "gz": "Páxina de Portafolio"
+      },
+      "description": {
+        "en": "This very website!",
+        "es": "¡Este mismo sitio web!",
+        "gz": "Este mesmo sitio web!"
+      },
       "image": "/images/proj_images/scrn_portfolio.webp",
       "tags": ["JavaScript", "CSS", "HTML", "React", "Responsive Design"],
       "HTMLlink": ["https://github.com/brrrrdy/portfolioV2"],
@@ -13,8 +73,16 @@
     },
     {
       "id": 1,
-      "title": "Weather App",
-      "description": "I made my own weather app that fetches real-time data from a weather API and dynamically updates the background to reflect day or night at the selected location.",
+      "title": {
+        "en": "Weather App",
+        "es": "Aplicación del Tiempo",
+        "gz": "Aplicación do Tempo"
+      },
+      "description": {
+        "en": "I made my own weather app that fetches real-time data from a weather API and dynamically updates the background to reflect day or night at the selected location.",
+        "es": "Creé mi propia aplicación del tiempo que obtiene datos en tiempo real de una API meteorológica y actualiza dinámicamente el fondo para reflejar el día o la noche en la ubicación seleccionada.",
+        "gz": "Creei a miña propia aplicación do tempo que obtén datos en tempo real dunha API meteorolóxica e actualiza dinamicamente o fondo para reflectir o día ou a noite na ubicación seleccionada."
+      },
       "image": "/images/proj_images/scrn_weather.webp",
       "tags": [
         "JavaScript",
@@ -30,8 +98,16 @@
     },
     {
       "id": 2,
-      "title": "Admin Dashboard",
-      "description": "A responsive admin dashboard that integrates the Last.fm API to display my currently playing music alongside other dynamic content.",
+      "title": {
+        "en": "Admin Dashboard",
+        "es": "Panel de Administración",
+        "gz": "Panel de Administración"
+      },
+      "description": {
+        "en": "A responsive admin dashboard that integrates the Last.fm API to display my currently playing music alongside other dynamic content.",
+        "es": "Un panel de administración responsivo que integra la API de Last.fm para mostrar la música que estoy escuchando junto con otro contenido dinámico.",
+        "gz": "Un panel de administración responsivo que integra a API de Last.fm para amosar a música que estou escoitando xunto con outro contido dinámico."
+      },
       "image": "/images/proj_images/scrn_dashboard.webp",
       "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"],
       "HTMLlink": ["https://github.com/brrrrdy/Dashboard"],
@@ -41,8 +117,16 @@
     },
     {
       "id": 3,
-      "title": "Calculator",
-      "description": "A fully functional scientific calculator with support for advanced operations and a clean, intuitive interface.",
+      "title": {
+        "en": "Calculator",
+        "es": "Calculadora",
+        "gz": "Calculadora"
+      },
+      "description": {
+        "en": "A fully functional scientific calculator with support for advanced operations and a clean, intuitive interface.",
+        "es": "Una calculadora científica completamente funcional con soporte para operaciones avanzadas y una interfaz limpia e intuitiva.",
+        "gz": "Unha calculadora científica completamente funcional con soporte para operacións avanzadas e unha interface limpa e intuitiva."
+      },
       "image": "/images/proj_images/scrn_calculator.webp",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink": ["https://github.com/brrrrdy/Calculator"],
@@ -50,11 +134,18 @@
       "featured": ["y"],
       "year": 2025
     },
-
     {
       "id": 4,
-      "title": "Library",
-      "description": "Simple library management app that lets users add, edit, and remove books, with data stored locally in the browser.",
+      "title": {
+        "en": "Library",
+        "es": "Biblioteca",
+        "gz": "Biblioteca"
+      },
+      "description": {
+        "en": "Simple library management app that lets users add, edit, and remove books, with data stored locally in the browser.",
+        "es": "Aplicación simple de gestión de biblioteca que permite a los usuarios agregar, editar y eliminar libros, con datos almacenados localmente en el navegador.",
+        "gz": "Aplicación sinxela de xestión de biblioteca que permite aos usuarios engadir, editar e eliminar libros, con datos almacenados localmente no navegador."
+      },
       "image": "/images/proj_images/scrn_library.webp",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink": ["https://github.com/brrrrdy/Library"],
@@ -62,11 +153,18 @@
       "featured": ["n"],
       "year": 2025
     },
-
     {
       "id": 5,
-      "title": "Sign-up Form",
-      "description": "A responsive sign-up form with real-time validation and clean, modern styling.",
+      "title": {
+        "en": "Sign-up Form",
+        "es": "Formulario de Registro",
+        "gz": "Formulario de Rexistro"
+      },
+      "description": {
+        "en": "A responsive sign-up form with real-time validation and clean, modern styling.",
+        "es": "Un formulario de registro responsivo con validación en tiempo real y estilo limpio y moderno.",
+        "gz": "Un formulario de rexistro responsivo con validación en tempo real e estilo limpo e moderno."
+      },
       "image": "/images/proj_images/scrn_signup.webp",
       "tags": ["JavaScript", "CSS", "HTML", "Responsive Design"],
       "HTMLlink": ["https://github.com/brrrrdy/Sign-up-Form"],
@@ -74,11 +172,18 @@
       "featured": ["n"],
       "year": 2025
     },
-
     {
       "id": 6,
-      "title": "To-Do-List",
-      "description": "Task management app that lets users add, edit, and delete tasks, with data saved in local storage.",
+      "title": {
+        "en": "To-Do-List",
+        "es": "Lista de Tareas",
+        "gz": "Lista de Tarefas"
+      },
+      "description": {
+        "en": "Task management app that lets users add, edit, and delete tasks, with data saved in local storage.",
+        "es": "Aplicación de gestión de tareas que permite a los usuarios agregar, editar y eliminar tareas, con datos guardados en almacenamiento local.",
+        "gz": "Aplicación de xestión de tarefas que permite aos usuarios engadir, editar e eliminar tarefas, con datos gardados en almacenamento local."
+      },
       "image": "/images/proj_images/scrn_todo.webp",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink": ["https://github.com/brrrrdy/To-Do-List/tree/main"],
@@ -86,11 +191,18 @@
       "featured": ["n"],
       "year": 2025
     },
-
     {
       "id": 7,
-      "title": "Smiling Salads Restaurant",
-      "description": "Single-page restaurant website built to practice using Webpack and SPA development techniques.",
+      "title": {
+        "en": "Smiling Salads Restaurant",
+        "es": "Restaurante Smiling Salads",
+        "gz": "Restaurante Smiling Salads"
+      },
+      "description": {
+        "en": "Single-page restaurant website built to practice using Webpack and SPA development techniques.",
+        "es": "Sitio web de restaurante de una sola página construido para practicar el uso de Webpack y técnicas de desarrollo SPA.",
+        "gz": "Sitio web de restaurante dunha soa páxina construído para practicar o uso de Webpack e técnicas de desenvolvemento SPA."
+      },
       "image": "/images/proj_images/scrn_restaurant.webp",
       "tags": ["JavaScript", "CSS", "HTML"],
       "HTMLlink": ["https://github.com/brrrrdy/restaurant-webpack"],
@@ -98,11 +210,18 @@
       "featured": ["n"],
       "year": 2025
     },
-
     {
       "id": 8,
-      "title": "Noughts and Crosses",
-      "description": "The classic Tic-Tac-Toe (I speak British English!) game delivered in the browser with a simple and interactive interface.",
+      "title": {
+        "en": "Noughts and Crosses",
+        "es": "Tres en Raya",
+        "gz": "Tres en Raia"
+      },
+      "description": {
+        "en": "The classic Tic-Tac-Toe (I speak British English!) game delivered in the browser with a simple and interactive interface.",
+        "es": "El clásico juego de tres en raya (¡hablo inglés británico!) entregado en el navegador con una interfaz simple e interactiva.",
+        "gz": "O clásico xogo de tres en raia (falo inglés británico!) entregado no navegador cunha interface sinxela e interactiva."
+      },
       "image": "/images/proj_images/scrn_naughtscrosses.webp",
       "tags": ["JavaScript", "CSS", "HTML", "Game"],
       "HTMLlink": ["https://github.com/brrrrdy/Tic-Tac-Toe"],
@@ -110,11 +229,18 @@
       "featured": ["n"],
       "year": 2025
     },
-
     {
       "id": 9,
-      "title": "Rock, Paper, Scissors",
-      "description": "A Pokémon-themed Rock, Paper, Scissors game with interactive gameplay and fun visuals.",
+      "title": {
+        "en": "Rock, Paper, Scissors",
+        "es": "Piedra, Papel, Tijeras",
+        "gz": "Pedra, Papel, Tesoiras"
+      },
+      "description": {
+        "en": "A Pokémon-themed Rock, Paper, Scissors game with interactive gameplay and fun visuals.",
+        "es": "Un juego de Piedra, Papel, Tijeras con temática de Pokémon con jugabilidad interactiva y visuales divertidos.",
+        "gz": "Un xogo de Pedra, Papel, Tesoiras con temática de Pokémon con xogabilidade interactiva e visuales divertidos."
+      },
       "image": "/images/proj_images/scrn_rps.webp",
       "tags": ["JavaScript", "CSS", "HTML", "Game"],
       "HTMLlink": ["https://github.com/brrrrdy/Rock-Paper-Scissors"],
@@ -124,8 +250,16 @@
     },
     {
       "id": 10,
-      "title": "Etch-a-Sketch",
-      "description": "A browser-based Etch-a-Sketch game that lets users draw and erase using simple controls.",
+      "title": {
+        "en": "Etch-a-Sketch",
+        "es": "Pizarra Mágica",
+        "gz": "Lousa Máxica"
+      },
+      "description": {
+        "en": "A browser-based Etch-a-Sketch game that lets users draw and erase using simple controls.",
+        "es": "Un juego de pizarra mágica basado en navegador que permite a los usuarios dibujar y borrar usando controles simples.",
+        "gz": "Un xogo de lousa máxica baseado en navegador que permite aos usuarios debuxar e borrar usando controis sinxelos."
+      },
       "image": "/images/proj_images/scrn_etch.webp",
       "tags": ["JavaScript", "CSS", "HTML", "Game"],
       "HTMLlink": ["https://github.com/brrrrdy/Etch-a-Sketch"],

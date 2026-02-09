@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useLanguage } from "./LanguageContext";
 import Colors from "./Colors";
 import LanguageSelector from "./LanguageSelector";
+import navContent from "../content/navbar.json";
 
 function TopNav() {
+  const { language } = useLanguage();
+  const content = navContent[language] || navContent.en;
   const [theme, setTheme] = useState(() => {
     // Initialize theme from localStorage or default to "light"
     return localStorage.getItem("portfolio-theme") || "light";
@@ -13,11 +17,11 @@ function TopNav() {
   const location = useLocation();
 
   const navLinks = [
-    { href: "#home", text: "Home", type: "scroll" },
-    { href: "#about", text: "About", type: "scroll" },
-    { href: "#projects", text: "Projects", type: "scroll" },
-    { href: "#toolkit", text: "Toolkit", type: "scroll" },
-    { href: "/contact", text: "Contact", type: "navigate" },
+    { href: "#home", text: content.home, type: "scroll" },
+    { href: "#about", text: content.about, type: "scroll" },
+    { href: "#projects", text: content.projects, type: "scroll" },
+    { href: "#toolkit", text: content.toolkit, type: "scroll" },
+    { href: "/contact", text: content.contact, type: "navigate" },
   ];
 
   const handleNavClick = (link) => {

@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
+import { useLanguage } from "./LanguageContext";
 import heroContent from "../content/hero.json";
 import tomImage from "../assets/images/heroTom.webp";
 
-const phrases = ["full-stack developer", "basketball player", "pulpo enjoyer"];
 const colors = ["red", "orange", "purple"];
 
 function Hero() {
+  const { language } = useLanguage();
+  const content = heroContent[language] || heroContent.en;
+  const phrases = content.typingPhrases;
+
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
@@ -46,19 +50,17 @@ function Hero() {
     }
 
     return () => clearTimeout(timeout);
-  }, [currentPhraseIndex, currentCharIndex, isTyping, isDeleting]);
+  }, [currentPhraseIndex, currentCharIndex, isTyping, isDeleting, phrases]);
 
   return (
     <div className="hero-section">
       <div className="hero-container">
         <div className="main-content">
           <div className="text-content">
-            <h1 className="title">{heroContent.headerTitle}</h1>
+            <h1 className="title">{content.headerTitle}</h1>
 
             <div className="subtitle">
-              <span className="intro-text">
-                {heroContent.headerSubtitleEn}{" "}
-              </span>
+              <span className="intro-text">{content.headerSubtitle} </span>
               <span className={`typing-text ${colors[currentPhraseIndex]}`}>
                 {displayedText}
               </span>
@@ -67,7 +69,7 @@ function Hero() {
 
             <div className="link-content">
               <a href="#" className="btn-primary">
-                <span>download my cv</span>
+                <span>{content.headerLink}</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { projects } from "../content/projects.json";
+import { useLanguage } from "./LanguageContext";
+import projectsData from "../content/projects.json";
 import Card from "../helpers/Card";
 import Toolkit from "./Toolkit";
 
 function Projects() {
+  const { language } = useLanguage();
+  const { projects } = projectsData;
+  const ui = projectsData.ui[language] || projectsData.ui.en;
   const [selectedTechs, setSelectedTechs] = useState([]);
 
   // shuffle array and get random projects
@@ -23,9 +27,9 @@ function Projects() {
     );
     displayProjects = getRandomProjects(filteredProjects, 4);
     if (selectedTechs.length === 1) {
-      galleryTitle = `my projects that use ${selectedTechs[0]}`;
+      galleryTitle = `${ui.myProjectsThatUse} ${selectedTechs[0]}`;
     } else {
-      galleryTitle = `my projects that use ${selectedTechs.join(", ")}`;
+      galleryTitle = `${ui.myProjectsThatUse} ${selectedTechs.join(", ")}`;
     }
   } else {
     // show featured projects by default
@@ -33,7 +37,7 @@ function Projects() {
       (project) => project.featured[0] === "y",
     );
     displayProjects = featuredProjects.slice(0, 4);
-    galleryTitle = "my projects";
+    galleryTitle = ui.myProjects;
   }
 
   return (
@@ -49,7 +53,7 @@ function Projects() {
             </div>
             <div className="see-more-container">
               <Link to="/projects" className="btn-primary">
-                see all my projects
+                {ui.seeAllProjects}
               </Link>
             </div>
           </div>

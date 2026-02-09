@@ -1,5 +1,7 @@
 import React from "react";
-import { projects } from "../content/projects.json";
+import { useLanguage } from "./LanguageContext";
+import projectsData from "../content/projects.json";
+import toolkitContent from "../content/toolkit.json";
 
 // Import technology logos
 import cssLogo from "../assets/images/css3-plain.svg";
@@ -21,6 +23,10 @@ import apiLogo from "../assets/images/api.svg";
 import responsiveLogo from "../assets/images/responsive.svg";
 
 function Toolkit({ selectedTechs, setSelectedTechs }) {
+  const { language } = useLanguage();
+  const { projects } = projectsData;
+  const content = toolkitContent[language] || toolkitContent.en;
+
   const techLogos = {
     CSS: cssLogo,
     ESLint: eslintLogo,
@@ -59,7 +65,7 @@ function Toolkit({ selectedTechs, setSelectedTechs }) {
   return (
     <div className="toolkit-section">
       <div className="section-container">
-        <h2>my toolkit</h2>
+        <h2>{content.myToolkit}</h2>
         <div className="section-content-wrapper">
           <div className="technologies-grid">
             {uniqueTechnologies.map((tech, index) => (

@@ -1,17 +1,21 @@
 import { useNavigate, useLocation } from "react-router-dom";
+import { useLanguage } from "./LanguageContext";
 import githubLogo from "../assets/images/github-original.svg";
 import linkedinLogo from "../assets/images/linkedin.svg";
+import footerContent from "../content/footer.json";
 
 function Footer() {
+  const { language } = useLanguage();
+  const content = footerContent[language] || footerContent.en;
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
   const location = useLocation();
 
   const footerLinks = [
-    { href: "#about", text: "About" },
-    { href: "#projects", text: "Projects" },
-    { href: "#toolkit", text: "Toolkit" },
-    { href: "/contact", text: "Contact" },
+    { href: "#about", text: content.about },
+    { href: "#projects", text: content.projects },
+    { href: "#toolkit", text: content.toolkit },
+    { href: "/contact", text: content.contact },
   ];
 
   const handleNavClick = (link) => {
@@ -41,7 +45,9 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-left">
-            <p>&copy; {currentYear} Tom Alvarez. All rights reserved.</p>
+            <p>
+              &copy; {currentYear} Tom Alvarez. {content.copyright}
+            </p>
           </div>
 
           <div className="footer-right-section">
@@ -70,7 +76,7 @@ function Footer() {
               </div>
             </div>
             <div className="footer-social">
-              <h4>Connect</h4>
+              <h4>{content.connect}</h4>
               <div className="social-links">
                 <a
                   href="https://www.linkedin.com/in/tom-alvarez-ryan-80423951/"

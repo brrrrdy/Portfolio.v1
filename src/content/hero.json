@@ -1,5 +1,32 @@
 {
-  "headerTitle": "Tom Alvarez",
-  "headerSubtitleEn": "I am a",
-  "headerLink": "download my cv"
+  "en": {
+    "headerTitle": "Tom Alvarez",
+    "headerSubtitle": "I am a",
+    "headerLink": "download my cv",
+    "typingPhrases": [
+      "full-stack developer",
+      "basketball player",
+      "pulpo enjoyer"
+    ]
+  },
+  "es": {
+    "headerTitle": "Tom Alvarez",
+    "headerSubtitle": "Soy un",
+    "headerLink": "descargar mi cv",
+    "typingPhrases": [
+      "desarrollador full-stack",
+      "jugador de baloncesto",
+      "amante del pulpo"
+    ]
+  },
+  "gz": {
+    "headerTitle": "Tom Alvarez",
+    "headerSubtitle": "Son un",
+    "headerLink": "descargar o meu cv",
+    "typingPhrases": [
+      "desenvolvedor full-stack",
+      "xogador de baloncesto",
+      "amante do polbo"
+    ]
+  }
 }

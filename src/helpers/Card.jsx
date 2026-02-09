@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "../components/LanguageContext";
 import { projectImages } from "../assets/images/projectImages";
 
 function Card({ project }) {
+  const { language } = useLanguage();
   const [isInFocus, setIsInFocus] = useState(false);
   const cardRef = useRef(null);
 
@@ -38,14 +40,17 @@ function Card({ project }) {
   return (
     <div className={`card ${isInFocus ? "in-focus" : ""}`} ref={cardRef}>
       {projectImage ? (
-        <img src={projectImage} alt={project.title} />
+        <img
+          src={projectImage}
+          alt={project.title[language] || project.title.en}
+        />
       ) : (
         <div className="image-placeholder">
           <span>No Image Available</span>
         </div>
       )}
-      <h3>{project.title}</h3>
-      <p>{project.description}</p>
+      <h3>{project.title[language] || project.title.en}</h3>
+      <p>{project.description[language] || project.description.en}</p>
       <div className="tags">
         {project.tags.map((tag, index) => (
           <span key={index} className="tag">

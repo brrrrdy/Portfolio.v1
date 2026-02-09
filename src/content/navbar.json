@@ -1,0 +1,23 @@
+{
+  "en": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "toolkit": "Toolkit",
+    "contact": "Contact"
+  },
+  "es": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "projects": "Proyectos",
+    "toolkit": "Herramientas",
+    "contact": "Contacto"
+  },
+  "gz": {
+    "home": "Inicio",
+    "about": "Sobre Min",
+    "projects": "Proxectos",
+    "toolkit": "Ferramentas",
+    "contact": "Contacto"
+  }
+}

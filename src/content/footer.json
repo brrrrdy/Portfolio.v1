@@ -1,0 +1,26 @@
+{
+  "en": {
+    "copyright": "All rights reserved.",
+    "about": "About",
+    "projects": "Projects",
+    "toolkit": "Toolkit",
+    "contact": "Contact",
+    "connect": "Connect"
+  },
+  "es": {
+    "copyright": "Todos los derechos reservados.",
+    "about": "Sobre Mí",
+    "projects": "Proyectos",
+    "toolkit": "Herramientas",
+    "contact": "Contacto",
+    "connect": "Conectar"
+  },
+  "gz": {
+    "copyright": "Todos os dereitos reservados.",
+    "about": "Sobre Min",
+    "projects": "Proxectos",
+    "toolkit": "Ferramentas",
+    "contact": "Contacto",
+    "connect": "Conectar"
+  }
+}
