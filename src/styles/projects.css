@@ -72,7 +72,7 @@
 /* Desktop: unblur on hover */
 @media (min-width: 769px) {
   .card img {
-    filter: blur(15px);
+    filter: blur(3px);
   }
 
   .card:hover img {
