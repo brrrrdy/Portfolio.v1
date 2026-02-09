@@ -3,7 +3,7 @@ import { useLanguage } from "./LanguageContext";
 import heroContent from "../content/hero.json";
 import tomImage from "../assets/images/heroTom.webp";
 
-const colors = ["red", "orange", "purple"];
+const colors = ["red", "orange", "purple", "green", "blue", "yellow"];
 
 function Hero() {
   const { language } = useLanguage();

@@ -67,11 +67,27 @@ function TopNav() {
   return (
     <nav className="top-nav">
       <div className="top-nav-container">
-        {/* left side - theme toggle */}
+        {/* left side - theme toggle and mobile home button */}
         <div className="nav-left">
           <div className="nav-theme-toggle">
             <Colors theme={theme} setTheme={setTheme} />
           </div>
+          {/* Home icon - mobile only */}
+          <button
+            className="mobile-home-button"
+            onClick={() => handleNavClick({ href: "#home", type: "scroll" })}
+            aria-label="Go to home"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 -960 960 960"
+            >
+              <path d="M120-120v-560h160v-160h400v320h160v400H520v-160h-80v160H120Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 320h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Z" />
+            </svg>
+          </button>
         </div>
 
         {/* center - nav links (desktop) */}
