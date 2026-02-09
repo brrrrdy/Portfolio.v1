@@ -11,6 +11,7 @@
   --tag-button: rgb(183, 83, 76);
   --dark-button-inactive: #3e30ad;
   --card-border: #df462f;
+  --card-shadow: #e49a6c;
 
   background-color: var(--light-background);
   color: var(--dark-text);
@@ -29,6 +30,7 @@
   --solid-button-hover: #fb923c;
   --card-border: #b8dbd9;
   --tag-button: #1e293b;
+  --card-shadow: #1e293b;
 
   background-color: var(--dark-background);
   color: var(--light-text);

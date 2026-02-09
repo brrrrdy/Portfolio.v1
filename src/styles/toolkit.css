@@ -1,5 +1,9 @@
 /* TOOLKIT */
 
+#toolkit {
+  scroll-margin-top: 80px;
+}
+
 .toolkit-section {
   width: 100%;
 }
